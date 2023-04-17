@@ -1,30 +1,33 @@
-/**
-  @author: jiangxi
-  @since: 2023/4/16
-  @desc: //TODO
-**/
+/*
+*
+
+	@author: jiangxi
+	@since: 2023/4/16
+	@desc: //TODO
+
+*
+*/
 package goconcurrencygeek
 
-
 import (
-"context"
-"fmt"
+	"context"
+	"fmt"
 )
 
 func main() {
-	gen := func(ctx context.Context) &lt;-chan int {
+	gen := func(ctx context.Context) <-chan int {
 		dst := make(chan int)
 		n := 1
 		go func() {
-		for {
-		select {
-	case &lt;-ctx.Done():
-		return // returning not to leak the goroutine
-	case dst &lt;- n:
-		n++
-	}
-	}
-	}()
+			for {
+				select {
+				case <-ctx.Done():
+					return // returning not to leak the goroutine
+				case dst <- n:
+					n++
+				}
+			}
+		}()
 		return dst
 	}
 
@@ -38,4 +41,3 @@ func main() {
 		}
 	}
 }
-

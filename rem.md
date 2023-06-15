@@ -91,14 +91,14 @@
 [1143. Longest Common Subsequence](algorithm/dp/longestcommonsubsequence/1143.go)最长公共子序列
 ### 01背包，
 4，5，7
-[322. Coin Change (Medium)]()找零钱的最少硬币数
-[518. Coin Change 2 (Medium)]()找零钱的硬币数组合
-[377. Combination Sum IV (Medium)]()组合总和
+[322. Coin Change (Medium)](algorithm/dp/0-1bag/322.go)找零钱的最少硬币数  
+[518. Coin Change 2 (Medium)](algorithm/dp/0-1bag/518.go)找零钱的硬币数组合  
+[377. Combination Sum IV (Medium)](algorithm/dp/0-1bag/377.go)组合总和  
 ### 股票交易，
 4
-[188. Best Time to Buy and Sell Stock IV (Hard)]()只能进行 k 次的股票交易
+[188. Best Time to Buy and Sell Stock IV (Hard)](algorithm/dp/stocktrade/188.go)只能进行 k 次的股票交易  
 ### 字符串编辑，
 1，2，3
-[583. Delete Operation for Two Strings (Medium)](algorithm/dp/stringedit/583.go)删除两个字符串的字符使它们相等
-[72. Edit Distance (Hard)](algorithm/dp/stringedit/72.go)编辑距离
-[650. 2 Keys Keyboard (Medium)](algorithm/dp/stringedit/650.go)复制粘贴字符
+[583. Delete Operation for Two Strings (Medium)](algorithm/dp/stringedit/583.go)删除两个字符串的字符使它们相等  
+[72. Edit Distance (Hard)](algorithm/dp/stringedit/72.go)编辑距离  
+[650. 2 Keys Keyboard (Medium)](algorithm/dp/stringedit/650.go)复制粘贴字符  

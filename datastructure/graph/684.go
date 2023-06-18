@@ -1,8 +1,12 @@
-/**
-  @author: jiangxi
-  @since: 2022/12/19
-  @desc: //TODO
-**/
+/*
+*
+
+	@author: jiangxi
+	@since: 2022/12/19
+	@desc: //TODO
+
+*
+*/
 package graph
 
 func findRedundantConnection(edges [][]int) []int {
@@ -13,7 +17,7 @@ func findRedundantConnection(edges [][]int) []int {
 	var find func(x int) int
 	find = func(x int) int {
 		if parent[x] != x {
-			//要一级一级往上找,知道找到总点等于自己点真总点
+			//祖先没有祖先
 			parent[x] = find(parent[x])
 		}
 		return parent[x]
@@ -23,7 +27,7 @@ func findRedundantConnection(edges [][]int) []int {
 		if x == y {
 			return false
 		}
-		parent[x] = y
+		parent[x] = y //人为连接，这样做，已经包含的边连接的点只会有一个共同的祖先。
 		return true
 	}
 	for _, e := range edges {

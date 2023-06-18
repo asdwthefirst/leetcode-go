@@ -1,13 +1,17 @@
-/**
-  @author: jiangxi
-  @since: 2022/11/11
-  @desc: //TODO
-**/
+/*
+*
+
+	@author: jiangxi
+	@since: 2022/11/11
+	@desc: //TODO
+
+*
+*/
 package stackqueue
 
 type MinStack struct {
 	stack    []int
-	minStack []int
+	minStack []int //minstack和stack同数量增长，minstack保存当前最小值
 }
 
 func Constructor() MinStack {

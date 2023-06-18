@@ -3,14 +3,14 @@
 ### 递归，
 11，12，13，14  
 [404. Sum of Left Leaves (Easy)](datastructure/tree/recursion/404.go)  
-[687. Longest Univalue Path (Easy)](datastructure/tree/traversing/687.go)  
-[337. House Robber III (Medium)](datastructure/tree/traversing/337.go)  
-[671. Second Minimum Node In a Binary Tree (Easy)](datastructure/tree/traversing/671.go)  
+[687. Longest Univalue Path (Easy)](datastructure/tree/recursion/687.go)  
+[337. House Robber III (Medium)](datastructure/tree/recursion/337.go)  
+[671. Second Minimum Node In a Binary Tree (Easy)](datastructure/tree/recursion/671.go)  
 
 ### 前中后序  
 [中序](datastructure/tree/traversing/94.go)  
 [后序](datastructure/tree/traversing/145.go)  
-[中序](datastructure/tree/traversing/144.go)  
+[前序](datastructure/tree/traversing/144.go)  
 ### bst
 2，3，5，8，10（一点印象都无）  
 [230. Kth Smallest Element in a BST (Medium)](datastructure/tree/BST/230.go)  
@@ -22,14 +22,14 @@
 2  
 [677. Map Sum Pairs (Medium)](datastructure/tree/Trie/677.go)  
 ## 栈与队列
-2，3，5（单调栈），6  
+2，3（最小栈的思想，完全没印象），5（单调栈），6  
 [225. Implement Stack using Queues (Easy)](datastructure/stackqueue/225.go)  
 [155. Min Stack (Easy)](datastructure/stackqueue/155.go)  
 [739. Daily Temperatures (Medium)](datastructure/stackqueue/739.go)  
 [503. Next Greater Element II (Medium)](datastructure/stackqueue/503.go)  
 
 ## 哈希
-3，  
+3（其实好像很简单，但还是在hash留一题），  
 [594. Longest Harmonious Subsequence (Easy)](datastructure/hashset/594.go)
 ## 数组矩阵
 6，7（毫无印象，时间换空间），8（太特化了想不起来），11  

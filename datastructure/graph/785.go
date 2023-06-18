@@ -1,8 +1,12 @@
-/**
-  @author: jiangxi
-  @since: 2022/12/16
-  @desc: //TODO
-**/
+/*
+*
+
+	@author: jiangxi
+	@since: 2022/12/16
+	@desc: //TODO
+
+*
+*/
 package graph
 
 var (
@@ -15,7 +19,7 @@ func isBipartite(graph [][]int) bool {
 	color = make([]int, len(graph))
 	valid = true
 	for i := 0; i < len(graph) && valid; i++ {
-		if color[i] == UNCOLORED {
+		if color[i] == UNCOLORED { //先判定是否color，我0618做的时候没有考虑好
 			dfs(graph, RED, i)
 		}
 	}

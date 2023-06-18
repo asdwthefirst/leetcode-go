@@ -1,8 +1,12 @@
-/**
-  @author: jiangxi
-  @since: 2022/11/11
-  @desc: //TODO
-**/
+/*
+*
+
+	@author: jiangxi
+	@since: 2022/11/11
+	@desc: //TODO
+
+*
+*/
 package stackqueue
 
 type MyStack struct {
@@ -16,7 +20,7 @@ func Constructor225() (s MyStack) {
 
 /** Push element x onto stack. */
 func (s *MyStack) Push(x int) {
-	s.queue2 = append(s.queue2, x)
+	s.queue2 = append(s.queue2, x) //中心思想，利用一个queue2做临时队列，每次把新加的元素放到队列首部
 	for len(s.queue1) > 0 {
 		s.queue2 = append(s.queue2, s.queue1[0])
 		s.queue1 = s.queue1[1:]

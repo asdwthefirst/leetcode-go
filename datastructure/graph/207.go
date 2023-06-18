@@ -1,11 +1,16 @@
-/**
-  @author: jiangxi
-  @since: 2022/12/18
-  @desc: //TODO
-**/
+/*
+*
+
+	@author: jiangxi
+	@since: 2022/12/18
+	@desc: //TODO
+
+*
+*/
 package graph
 
 //求拓扑，分为未搜索，搜索中，已完成
+//实际上就是出现了找环，有环就是no
 
 var (
 	valid207                        bool

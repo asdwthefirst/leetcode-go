@@ -1,8 +1,12 @@
-/**
-  @author: jiangxi
-  @since: 2022/11/10
-  @desc: //TODO
-**/
+/*
+*
+
+	@author: jiangxi
+	@since: 2022/11/10
+	@desc: //TODO
+
+*
+*/
 package traversing
 
 func inorderTraversal(root *TreeNode) []int {
@@ -17,10 +21,9 @@ func inorderTraversal(root *TreeNode) []int {
 		node = stack[len(stack)-1]
 		result = append(result, node.Val)
 		stack = stack[:len(stack)-1]
-		if node.Right != nil {
+		if node.Right != nil { //我忘记了这一步怎么处理0618
 			stack = append(stack, node.Right)
 		}
 	}
 	return result
-
 }

@@ -51,16 +51,17 @@
 
 # 算法
 ## 排序
-堆1，容易忘记。[215. Kth Largest Element in an Array (Medium)](algorithm/sort/215.go)  
-荷兰国旗1  [75. Sort Colors (Medium)](algorithm/sort/75.go)  
+堆1，容易忘记。[215. Kth Largest Element in an Array (Medium)](algorithm/sort/215.go)0624成功凭空做出  
+荷兰国旗1  [75. Sort Colors (Medium)](algorithm/sort/75.go)0624直接做出  
 ## 贪心
-4，[406. Queue Reconstruction by Height(Medium)](algorithm/greed/406.go)
-9，[665. Non-decreasing Array (Easy)](algorithm/greed/665.go)
-10[53. Maximum Subarray (Easy)](algorithm/greed/53.go)
+4，[406. Queue Reconstruction by Height(Medium)](algorithm/greed/406.go)靠记忆的  
+9，[665. Non-decreasing Array (Easy)](algorithm/greed/665.go)细节处理差了一点，但是也是调调能通的  
+10，[53. Maximum Subarray (Easy)](algorithm/greed/53.go)还是有一点忘记  
 ## 分治
-都要，我完全忘记分治是怎么治的了
-1，[241. Different Ways to Add Parentheses (Medium)](algorithm/divideandconquer/241.go)
-2，[95. Unique Binary Search Trees II (Medium)](algorithm/divideandconquer/95.go)
+都要，我完全忘记分治是怎么治的了  
+1，[241. Different Ways to Add Parentheses (Medium)](algorithm/divideandconquer/241.go)  
+2，[95. Unique Binary Search Trees II (Medium)](algorithm/divideandconquer/95.go)  
+我完全想起来分治是怎么回事了，its easy，枚举所有情况
 ## 搜索
 各看一题
 ### backtracking

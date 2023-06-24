@@ -1,17 +1,21 @@
-/**
-  @author: jiangxi
-  @since: 2022/12/20
-  @desc: //TODO
-**/
+/*
+*
+
+	@author: jiangxi
+	@since: 2022/12/20
+	@desc: //TODO
+
+*
+*/
 package sort
 
 import (
-	"fmt"
 	"math/rand"
 	"time"
 )
 
 //超时，不知道优化点在哪
+/*
 func FindKthLargest(nums []int, k int) int {
 	rand.Seed(time.Now().UnixNano())
 	start := time.Now()
@@ -41,6 +45,12 @@ func quickSelect(nums []int, left, right int, k int) int {
 	}
 
 	nums[pa] = mid
+	//x:=nums[right]
+	//i:=left-1
+	//for j:=left;j<right;i++{
+	//	if nums[j]<=x{}
+	//}
+	//
 	fmt.Println(nums)
 	fmt.Println(pa, pb, k)
 	if pa == k-1+left {
@@ -51,6 +61,45 @@ func quickSelect(nums []int, left, right int, k int) int {
 	} else {
 		return quickSelect(nums, left, pa-1, k)
 	}
+}
+*/
+//0624这是gpt优化的，把递归改为迭代之后能通过，之后再看把
+func findKthLargest(nums []int, k int) int {
+	rand.Seed(time.Now().UnixNano())
+	// start := time.Now()
+	result := quickSelect(nums, k)
+	// fmt.Println(result)
+	// fmt.Println(time.Since(start))
+	return result
+}
+
+func quickSelect(nums []int, k int) int {
+	left, right := 0, len(nums)-1
+	for left <= right {
+		randPos := rand.Int()%(right-left+1) + left
+		nums[left], nums[randPos] = nums[randPos], nums[left]
+		mid := nums[left]
+		pa, pb := left, right
+		for pa < pb {
+			for pa < pb && nums[pb] < mid {
+				pb--
+			}
+			nums[pa] = nums[pb]
+			for pa < pb && nums[pa] >= mid {
+				pa++
+			}
+			nums[pb] = nums[pa]
+		}
+		nums[pa] = mid
+		if pa == k-1 {
+			return nums[pa]
+		} else if pa < k-1 {
+			left = pa + 1
+		} else {
+			right = pa - 1
+		}
+	}
+	return -1
 }
 
 /*

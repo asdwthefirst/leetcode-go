@@ -65,15 +65,19 @@
 ## 搜索
 各看一题
 ### backtracking
-5，[46. Permutations (Medium)](algorithm/search/backtracking/46.go) [leetcode](https://leetcode.cn/problems/palindrome-partitioning/description/)排列  
+5，[46. Permutations (Medium)](algorithm/search/backtracking/46.go) 排列  
+退出时设置visited=false我忘了。  
 6，[47. Permutations II (Medium)](algorithm/search/backtracking/47.go)含有相同元素排列  
+加入结果用数组copy我忘了，我原解中在backtrack的遍历中加了个nummap，我的直觉思路是给数组排序，然后判断非边界且跟前面相同则跳过，这样省空间    
 7，[77. Combinations (Medium)](algorithm/search/backtracking/77.go)组合  
 8，[39. Combination Sum (Medium)](algorithm/search/backtracking/39.go)组合求和  
-13，[131. Palindrome Partitioning (Medium)](algorithm/search/backtracking/131.go)分割字符串使得每个部分都是回文数  
+13，[131. Palindrome Partitioning (Medium)](algorithm/search/backtracking/131.go)[leetcode](https://leetcode.cn/problems/palindrome-partitioning/description/)分割字符串使得每个部分都是回文数  
 ### BFS
-1，[1091. Shortest Path in Binary Matrix(Medium)](algorithm/search/BFS/1091.go)计算在网格中从原点到特定点的最短路径长度
+1，[1091. Shortest Path in Binary Matrix(Medium)](algorithm/search/BFS/1091.go)计算在网格中从原点到特定点的最短路径长度  
+莫得啥子问题
 ### DFS
-5，[417. Pacific Atlantic Water Flow (Medium)](algorithm/search/DFS/417.go)
+5，[417. Pacific Atlantic Water Flow (Medium)](algorithm/search/DFS/417.go)  
+直接看了，还是忘记了，忘记的不是处理的细节而是整个dfs的思路，我的直觉想法还是从边境到内部的顺的想法，没有想到从每一个位置到边境的逆找的递归思想，（我的想法应该也是可以的，就是遍历的节点选择会不一样，没有这个直观。
 ## dp
 也是各看一题
 ### 斐波那契

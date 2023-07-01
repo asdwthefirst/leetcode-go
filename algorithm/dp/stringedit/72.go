@@ -1,13 +1,17 @@
-/**
-  @author: jiangxi
-  @since: 2023/1/5
-  @desc: //TODO
-**/
+/*
+*
+
+	@author: jiangxi
+	@since: 2023/1/5
+	@desc: //TODO
+
+*
+*/
 package stringedit
 
 import "fmt"
 
-//其实跟583一样，但我也是真的没有意识到
+// 其实跟583一样，但我也是真的没有意识到
 func minDistance(word1 string, word2 string) int {
 	dp := make([][]int, len(word1)+1) //预留一位不用的0，避免转移的时候判断有没有越界。。。
 	for i := range dp {
@@ -39,8 +43,8 @@ func min72(a, b int) int {
 	return a
 }
 
-//if wordi==wordj,dp[i][j]=dp[i-1][j-1]
-//if !=,dp[i][j]=min(dp[i-1][j]+1,dp[i][j-1]+1,dp[i-1][j-1]+1)，分别对应，删除，删除，更换
+// if wordi==wordj,dp[i][j]=dp[i-1][j-1]
+// if !=,dp[i][j]=min(dp[i-1][j]+1,dp[i][j-1]+1,dp[i-1][j-1]+1)，分别对应，删除，删除，更换
 func minDistance0701(word1 string, word2 string) int {
 	dp := make([][]int, len(word1)+1)
 	for j := range dp {

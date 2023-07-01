@@ -65,45 +65,69 @@
 ## 搜索
 各看一题
 ### backtracking
-5，[46. Permutations (Medium)](algorithm/search/backtracking/46.go) [leetcode](https://leetcode.cn/problems/palindrome-partitioning/description/)排列  
+回溯是先处理一部分，再处理剩下的部分，先处理的部分可以复用在很多结果里。  
+5，[46. Permutations (Medium)](algorithm/search/backtracking/46.go)  [leetcode](https://leetcode.cn/problems/palindrome-partitioning/description/)排列  
 6，[47. Permutations II (Medium)](algorithm/search/backtracking/47.go)含有相同元素排列  
+我重做这题在copy数组加入结果时脑瘫了，还是出了错，忘记进行copy的动作。  
 7，[77. Combinations (Medium)](algorithm/search/backtracking/77.go)组合  
 8，[39. Combination Sum (Medium)](algorithm/search/backtracking/39.go)组合求和  
 13，[131. Palindrome Partitioning (Medium)](algorithm/search/backtracking/131.go)分割字符串使得每个部分都是回文数  
+巨大的问题，这题如果不出在回溯，我就不知道是回溯，好好考虑就是**前面处理的部分是可以复用，会重复处理的**  
+但是我这次在处理回文串进行了优化，用动态规划提前处理了回文串的判定问题，**而且在考虑动规的顺序时考虑到，因为需要【i+1】【j-1】，会希望比i大的，比j小的先处理了，所以才是i是逆序，j是正序。**  
 ### BFS
+bfs是寻找最优解，以同样的速度找最优解  
 1，[1091. Shortest Path in Binary Matrix(Medium)](algorithm/search/BFS/1091.go)计算在网格中从原点到特定点的最短路径长度
 ### DFS
-5，[417. Pacific Atlantic Water Flow (Medium)](algorithm/search/DFS/417.go)
+寻找所有解可以是dfs
+可以想象dfs是迷宫，路走不通再从上一个岔路口寻找
+5，[417. Pacific Atlantic Water Flow (Medium)](algorithm/search/DFS/417.go)  
+因为dfs可以在处理的时候标记，可以从远的地方处理，中间涉及到的部分就标记上了，一种递归的处理。  
 ## dp
 也是各看一题
 ### 斐波那契
-[213. House Robber II (Medium)](algorithm/dp/fibonacci/213.go)环形街区抢劫
+[213. House Robber II (Medium)](algorithm/dp/fibonacci/213.go)环形街区抢劫  
+0630写出来无压力
+
 ### 矩阵路径
-[62. Unique Paths (Medium)](algorithm/dp/matrixpath/62.go)矩阵的总路径数
+[62. Unique Paths (Medium)](algorithm/dp/matrixpath/62.go)矩阵的总路径数  
+easy
 ### 数组区间
-[413. Arithmetic Slices (Medium)](algorithm/dp/arrayrange/413.go)数组中等差递增子区间的个数
+[413. Arithmetic Slices (Medium)](algorithm/dp/arrayrange/413.go)数组中等差递增子区间的个数  
+忘记子数组是连续的限制了，看对题目之后做出来无压力。
 ### 分割整数
-[279. Perfect Squares(Medium)](algorithm/dp/cutint/279.go)
+[279. Perfect Squares(Medium)](algorithm/dp/cutint/279.go)  
+做的慢但是做的出来
 ### 最长递增子序列
-1，3
-[300. Longest Increasing Subsequence (Medium)](algorithm/dp/longestincreasingsubsequence/300.go)最长递增子序列
-[376. Wiggle Subsequence (Medium)](algorithm/dp/longestincreasingsubsequence/376.go)最长摆动子序列
+1，3  
+[300. Longest Increasing Subsequence (Medium)](algorithm/dp/longestincreasingsubsequence/300.go)最长递增子序列  
+easy  
+[376. Wiggle Subsequence (Medium)](algorithm/dp/longestincreasingsubsequence/376.go)最长摆动子序列  
+easy
 ### 最长公共子序列
-[1143. Longest Common Subsequence](algorithm/dp/longestcommonsubsequence/1143.go)最长公共子序列
+[1143. Longest Common Subsequence](algorithm/dp/longestcommonsubsequence/1143.go)最长公共子序列  
+easy  
 ### 01背包，
-4，5，7
+4，5，7  
 [322. Coin Change (Medium)](algorithm/dp/0-1bag/322.go)找零钱的最少硬币数  
+这个根279是一样的  
 [518. Coin Change 2 (Medium)](algorithm/dp/0-1bag/518.go)找零钱的硬币数组合  
+忘记组合会存在的重复问题了  
+**0630没写出来**忘记背包问题了。我写了我0630的想法，0630晚上太晚了不能思考，早上想出来问题所在了。  
+我想的想法也能解出来，但是效率低，需要简化变成完全背包问题，所以问题还是在识别背包问题的特征  
 [377. Combination Sum IV (Medium)](algorithm/dp/0-1bag/377.go)组合总和  
+0701靠感觉写出来了，而且想法比之前更成熟了  
 ### 股票交易，
 4
 [188. Best Time to Buy and Sell Stock IV (Hard)](algorithm/dp/stocktrade/188.go)只能进行 k 次的股票交易  
+我做出来了，，但是却有点疑问。  
 ### 字符串编辑，
-1，2，3
+1，2，3  
 [583. Delete Operation for Two Strings (Medium)](algorithm/dp/stringedit/583.go)删除两个字符串的字符使它们相等  
+easy  
 [72. Edit Distance (Hard)](algorithm/dp/stringedit/72.go)编辑距离  
+应该是有点印象，所以稍微调整了一下初始化条件做出来了。  
 [650. 2 Keys Keyboard (Medium)](algorithm/dp/stringedit/650.go)复制粘贴字符  
-
+思路成熟的写出来了  
 
 # 其他代码
 ## 设计模式

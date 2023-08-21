@@ -9,6 +9,8 @@
 */
 package graph
 
+//并查集
+
 func findRedundantConnection(edges [][]int) []int {
 	parent := make([]int, len(edges)+1)
 	for i := 0; i < len(parent); i++ {

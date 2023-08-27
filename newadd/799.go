@@ -12,7 +12,6 @@ package newadd
 import "fmt"
 
 // 每个杯子只会收到左右两边的溢出，一个是i-1,j-1,一个是i-1,j,假设我有一个函数in(x,y)能知道x，y的总流入量，实际上有起点0，0是有初始流入量的。
-// 用dp
 func champagneTower(poured int, query_row int, query_glass int) float64 {
 	fmt.Println(poured, query_row, query_glass)
 	dp := make([]float64, query_glass+2)
